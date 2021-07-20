@@ -1,4 +1,4 @@
-import task from "@cypress/code-coverage/task";
+const task = require("@cypress/code-coverage/task");
 
 /// <reference types="cypress" />
 // ***********************************************************

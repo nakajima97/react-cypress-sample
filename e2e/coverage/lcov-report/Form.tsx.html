@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Counter.tsx</title>
+    <title>Code coverage report for Form.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> Counter.tsx</h1>
+        <h1><a href="index.html">All files</a> Form.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -91,25 +91,23 @@
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
 <a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">50x</span>
-<span class="cline-any cline-yes">168x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">332x</span>
+<span class="cline-any cline-yes">332x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">168x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">168x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">332x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">168x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">168x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">114x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -118,6 +116,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -125,40 +124,47 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FC, useState } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { FC, useState } from "react";
 &nbsp;
-const Counter: FC = () =&gt; {
-  const [count, setCount] = useState(0);
-&nbsp;
-  const increment = () =&gt; {
-    setCount(count + 1);
-  };
-&nbsp;
-  const decrement = () =&gt; {
-    setCount(count - 1);
-  };
-&nbsp;
-  const handleReset = () =&gt; {
-    setCount(0);
-  };
+const Form: FC = () =&gt; {
+  const [mail, setMail] = useState("");
+  const [password, setPassword] = useState("");
 &nbsp;
   return (
     &lt;div&gt;
-      &lt;span className="counter"&gt;{count}&lt;/span&gt;
-      &lt;button className="increment" onClick={increment}&gt;
-        +
-      &lt;/button&gt;
-      &lt;button className="decrement" onClick={decrement}&gt;
-        -
-      &lt;/button&gt;
-      &lt;button className="reset" onClick={handleReset}&gt;
-        リセット
-      &lt;/button&gt;
+      &lt;form action=""&gt;
+        &lt;p&gt;
+          メールアドレス：
+          &lt;input
+            className="email"
+            type="email"
+            onChange={(e) =&gt; setMail(e.target.value)}
+            value={mail}
+          /&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          パスワード
+          &lt;input
+            className="password"
+            type="password"
+            onChange={(e) =&gt; setPassword(e.target.value)}
+            value={password}
+          /&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;input className="submit" type="submit" value="送信" /&gt;
+        &lt;/p&gt;
+      &lt;/form&gt;
     &lt;/div&gt;
   );
 };
 &nbsp;
-export default Counter;
+export default Form;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
