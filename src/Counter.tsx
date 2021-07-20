@@ -17,10 +17,16 @@ const Counter: FC = () => {
 
   return (
     <div>
-      <span>{count}</span>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-      <button onClick={handleReset}>リセット</button>
+      <span className="counter">{count}</span>
+      <button className="increment" onClick={increment}>
+        +
+      </button>
+      <button className="decrement" onClick={decrement}>
+        -
+      </button>
+      <button className="reset" onClick={handleReset}>
+        リセット
+      </button>
     </div>
   );
 };
