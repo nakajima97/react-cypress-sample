@@ -26,6 +26,13 @@
     "cy:open": "NODE_PATH=src cypress open",
     "cy:run": "NODE_PATH=src cypress run --headless"
   },
+  "nyc": {
+    "report-dir": "e2e/coverage",
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -45,7 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.9",
     "@cypress/instrument-cra": "^1.4.0",
-    "@types/testing-library__jest-dom": "^5.14.1"
+    "@types/testing-library__jest-dom": "^5.14.1",
+    "nyc": "^15.1.0"
   }
 }
